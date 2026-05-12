@@ -40,9 +40,9 @@
       <nav class="menu" id="menu-principal" aria-label="Menu principal">
         <a href="./index.html#home" data-i18n="navHome">Home</a>
         <a href="./index.html#about" data-i18n="navAbout">Sobre</a>
-        <a href="./index.html#story" data-i18n="navStory">História</a>
+        <a href="./index.html#journey" data-i18n="navJourney">Jornada</a>
+        <a href="./index.html#education-hub" data-i18n="navEducation">Formação</a>
         <a href="./index.html#skills" data-i18n="navSkills">Tecnologias</a>
-        <a href="./index.html#why-hire" data-i18n="navWhyHire">Por que me contratar</a>
         <a href="./index.html#projects" data-i18n="navProjects">Projetos</a>
         <a href="./servicos.html" class="active" data-i18n="navServices">Serviços</a>
         <a class="btn btn-accent btn-small" href="./index.html#contact" data-i18n="navContact">Contato</a>
@@ -68,7 +68,6 @@
         <span class="floating-code code-two">IA</span>
         <span class="floating-code code-three">Python</span>
         <span class="floating-code code-four">{ }</span>
-        <span class="scan-line"></span>
       </div>
 
       <div class="container page-hero-content">
@@ -79,12 +78,18 @@
         </h1>
 
         <p class="lead reveal reveal-delay-2" data-i18n="servicesPageText">
-          Clique em um serviço para abrir o WhatsApp com uma mensagem pronta. Assim eu já entendo o que você precisa e consigo responder com mais clareza sobre prazo e orçamento.
+          Escolha um serviço e abra uma conversa direta no WhatsApp com uma mensagem pronta. Assim eu entendo sua necessidade com mais clareza e consigo orientar sobre escopo, prazo e orçamento.
         </p>
 
         <div class="actions reveal reveal-delay-3">
           <a class="btn btn-accent" href="#services-list" data-i18n="servicesPagePrimary">Ver serviços</a>
           <a class="btn" href="./index.html#projects" data-i18n="servicesPageSecondary">Ver projetos</a>
+        </div>
+
+        <div class="hero-quick-nav reveal reveal-delay-3" aria-label="Navegação rápida dos serviços">
+          <a href="#services-list" data-i18n="quickServices">Serviços</a>
+          <a href="#process" data-i18n="quickProcess">Processo</a>
+          <a href="#service-cta" data-i18n="quickContact">Contato</a>
         </div>
 
         <div class="social-row reveal reveal-delay-3" aria-label="Redes profissionais">
@@ -93,10 +98,40 @@
             <span>GitHub</span>
           </a>
 
-          <a class="social-link" href="https://www.linkedin.com/in/geovanna-silva-55744022aR" target="_blank" rel="noopener" aria-label="LinkedIn de Geovanna Silva">
+          <a class="social-link" href="https://www.linkedin.com/in/geovanna-silva-55744022a/" target="_blank" rel="noopener" aria-label="LinkedIn de Geovanna Silva">
             <i class="devicon-linkedin-plain colored"></i>
             <span>LinkedIn</span>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quick-highlights" aria-label="Resumo dos serviços">
+      <div class="container">
+        <div class="highlight-strip reveal">
+          <article class="mini-highlight">
+            <span>01</span>
+            <strong data-i18n="serviceHighlightOneTitle">Web profissional</strong>
+            <p data-i18n="serviceHighlightOneText">Sites, landing pages e interfaces responsivas.</p>
+          </article>
+
+          <article class="mini-highlight">
+            <span>02</span>
+            <strong data-i18n="serviceHighlightTwoTitle">IA & Automação</strong>
+            <p data-i18n="serviceHighlightTwoText">Soluções inteligentes para reduzir tarefas manuais.</p>
+          </article>
+
+          <article class="mini-highlight">
+            <span>03</span>
+            <strong data-i18n="serviceHighlightThreeTitle">Dados & BI</strong>
+            <p data-i18n="serviceHighlightThreeText">Dashboards, indicadores e visualização de dados.</p>
+          </article>
+
+          <article class="mini-highlight">
+            <span>04</span>
+            <strong data-i18n="serviceHighlightFourTitle">Projetos sob demanda</strong>
+            <p data-i18n="serviceHighlightFourText">Planejamento, organização e entrega de soluções digitais.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -118,7 +153,7 @@
             class="card-link reveal"
             target="_blank"
             rel="noopener"
-            href="https://wa.me/5511911687141?text=Oi%20Geovanna!%20Tenho%20interesse%20em%20Desenvolvimento%20Web.%20Quero%20um%20site%20ou%20landing%20page.%20Podemos%20conversar%20sobre%20prazo%20e%20or%C3%A7amento%3F"
+            href="https://wa.me/5511911687141?text=Oi%20Geovanna!%20Tenho%20interesse%20em%20Desenvolvimento%20Web.%20Quero%20um%20site%2C%20landing%20page%20ou%20interface%20responsiva.%20Podemos%20conversar%20sobre%20escopo%2C%20prazo%20e%20or%C3%A7amento%3F"
           >
             <article class="card service-card featured-card">
               <span class="service-number">01</span>
@@ -137,6 +172,7 @@
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
+                <span>React</span>
               </div>
 
               <span class="fake-link" data-i18n="serviceCta1">Pedir orçamento</span>
@@ -165,6 +201,7 @@
               <div class="tags tech-stack-reveal">
                 <span>Python</span>
                 <span>IA</span>
+                <span>n8n</span>
                 <span data-i18n="automation">Automação</span>
               </div>
 
@@ -193,6 +230,7 @@
                 <span>Power BI</span>
                 <span>Excel</span>
                 <span>KPIs</span>
+                <span data-i18n="pillData">Dados</span>
               </div>
 
               <span class="fake-link" data-i18n="serviceCta3">Criar dashboard</span>
@@ -222,6 +260,7 @@
                 <span>TI</span>
                 <span data-i18n="systems">Sistemas</span>
                 <span data-i18n="processes">Processos</span>
+                <span>Infra</span>
               </div>
 
               <span class="fake-link" data-i18n="serviceCta4">Solicitar suporte</span>
@@ -249,6 +288,7 @@
                 <span data-i18n="security">Segurança</span>
                 <span data-i18n="access">Acessos</span>
                 <span data-i18n="pillData">Dados</span>
+                <span data-i18n="processes">Processos</span>
               </div>
 
               <span class="fake-link" data-i18n="serviceCta5">Organizar acessos</span>
@@ -276,6 +316,7 @@
                 <span data-i18n="project">Projeto</span>
                 <span data-i18n="strategy">Estratégia</span>
                 <span data-i18n="solution">Solução</span>
+                <span>Tech</span>
               </div>
 
               <span class="fake-link" data-i18n="serviceCta6">Enviar ideia</span>
@@ -290,7 +331,7 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="process-title">
+    <section class="section" id="process" aria-labelledby="process-title">
       <div class="container">
         <p class="eyebrow reveal" data-i18n="processEyebrow">Processo</p>
 
@@ -302,7 +343,7 @@
           Trabalho com comunicação clara para entender sua necessidade, alinhar expectativas e propor uma solução viável.
         </p>
 
-        <div class="timeline">
+        <div class="timeline process-timeline">
           <article class="timeline-item reveal">
             <span class="timeline-dot"></span>
             <small data-i18n="step1">Etapa 1</small>
@@ -339,9 +380,9 @@
       </div>
     </section>
 
-    <section class="section section-contrast" aria-label="Chamada para contato">
-      <div class="container">
-        <div class="card featured-card reveal">
+    <section class="section section-contrast" id="service-cta" aria-label="Chamada para contato">
+      <div class="container service-cta-box reveal">
+        <div>
           <p class="eyebrow" data-i18n="finalCtaEyebrow">Vamos começar?</p>
 
           <h2 class="section-title" data-i18n="finalCtaTitle">
@@ -351,34 +392,22 @@
           <p class="lead" data-i18n="finalCtaText">
             Me envie uma mensagem e vamos conversar sobre a melhor forma de transformar sua necessidade em uma solução digital.
           </p>
+        </div>
 
-          <div class="actions">
-            <a
-              class="btn btn-accent"
-              href="https://wa.me/5511911687141"
-              target="_blank"
-              rel="noopener"
-              data-i18n="finalCtaButton"
-            >
-              Chamar no WhatsApp
-            </a>
+        <div class="actions">
+          <a
+            class="btn btn-accent"
+            href="https://wa.me/5511911687141"
+            target="_blank"
+            rel="noopener"
+            data-i18n="finalCtaButton"
+          >
+            Chamar no WhatsApp
+          </a>
 
-            <a class="btn" href="./index.html#projects" data-i18n="finalCtaProjects">
-              Ver projetos
-            </a>
-          </div>
-
-          <div class="social-row" aria-label="Redes profissionais">
-            <a class="social-link" href="https://github.com/geovannasilva15" target="_blank" rel="noopener" aria-label="GitHub de Geovanna Silva">
-              <i class="devicon-github-original"></i>
-              <span>GitHub</span>
-            </a>
-
-            <a class="social-link" href="https://www.linkedin.com/in/geovanna-silva-55744022a/" target="_blank" rel="noopener" aria-label="LinkedIn de Geovanna Silva">
-              <i class="devicon-linkedin-plain colored"></i>
-              <span>LinkedIn</span>
-            </a>
-          </div>
+          <a class="btn" href="./index.html#projects" data-i18n="finalCtaProjects">
+            Ver projetos
+          </a>
         </div>
       </div>
     </section>
@@ -401,6 +430,10 @@
       </p>
     </div>
   </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/5511911687141" target="_blank" rel="noopener" aria-label="Falar com Geovanna pelo WhatsApp">
+    💬
+  </a>
 
   <button class="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
 
