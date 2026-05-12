@@ -319,7 +319,6 @@ textarea:focus-visible,
   color: var(--accent-500);
 }
 
-/* MENU LIMPO */
 .menu {
   display: flex;
   align-items: center;
@@ -1204,7 +1203,7 @@ textarea:focus-visible,
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-/* TECNOLOGIAS POR CATEGORIA */
+/* TECNOLOGIAS */
 .focus-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1247,53 +1246,6 @@ textarea:focus-visible,
 .skill-category-card h3 {
   margin: 0 0 18px;
   font-size: 1.35rem;
-}
-
-.tech-showcase {
-  position: relative;
-  margin-top: 44px;
-  padding: 30px;
-  border: 1px solid rgba(255, 91, 146, 0.24);
-  border-radius: var(--radius-xl);
-  background:
-    radial-gradient(circle at top left, rgba(255, 91, 146, 0.14), transparent 22rem),
-    radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.10), transparent 22rem),
-    rgba(255, 255, 255, 0.04);
-  box-shadow: var(--shadow-md);
-  overflow: hidden;
-}
-
-.tech-showcase::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0.16;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: radial-gradient(circle at center, black, transparent 74%);
-}
-
-.tech-showcase::after {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  opacity: 0.22;
-  background: conic-gradient(
-    from 180deg,
-    transparent,
-    rgba(255, 91, 146, 0.35),
-    transparent,
-    rgba(56, 189, 248, 0.22),
-    transparent
-  );
-  animation: techShowcaseSpin 18s linear infinite;
-}
-
-.tech-showcase > * {
-  position: relative;
-  z-index: 1;
 }
 
 .tech-orbit {
@@ -1349,39 +1301,6 @@ textarea:focus-visible,
 .tech-stack-reveal.tech-visible .tech-bubble,
 .tags.tech-stack-reveal.tech-visible span {
   animation: techItemReveal 0.72s var(--ease) forwards;
-}
-
-.tech-stack-reveal.tech-visible .tech-bubble:nth-child(1),
-.tags.tech-stack-reveal.tech-visible span:nth-child(1) {
-  animation-delay: 0.04s;
-}
-
-.tech-stack-reveal.tech-visible .tech-bubble:nth-child(2),
-.tags.tech-stack-reveal.tech-visible span:nth-child(2) {
-  animation-delay: 0.12s;
-}
-
-.tech-stack-reveal.tech-visible .tech-bubble:nth-child(3),
-.tags.tech-stack-reveal.tech-visible span:nth-child(3) {
-  animation-delay: 0.20s;
-}
-
-.tech-stack-reveal.tech-visible .tech-bubble:nth-child(4),
-.tags.tech-stack-reveal.tech-visible span:nth-child(4) {
-  animation-delay: 0.28s;
-}
-
-.tech-stack-reveal.tech-visible .tech-bubble:nth-child(5),
-.tags.tech-stack-reveal.tech-visible span:nth-child(5) {
-  animation-delay: 0.36s;
-}
-
-.tech-stack-reveal.tech-visible .tech-bubble:nth-child(6) {
-  animation-delay: 0.44s;
-}
-
-.tech-stack-reveal.tech-visible .tech-bubble:nth-child(7) {
-  animation-delay: 0.52s;
 }
 
 /* VALUE */
@@ -1465,6 +1384,16 @@ textarea:focus-visible,
   display: none;
 }
 
+.project-card h3 {
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+.project-card p {
+  max-width: 100%;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -1480,6 +1409,8 @@ textarea:focus-visible,
   background: rgba(255, 255, 255, 0.045);
   font-size: 0.88rem;
   font-weight: 800;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 /* SERVIÇOS */
@@ -1835,16 +1766,6 @@ textarea:focus-visible,
   }
 }
 
-@keyframes techShowcaseSpin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes techItemReveal {
   0% {
     opacity: 0;
@@ -2101,7 +2022,6 @@ textarea:focus-visible,
   .card,
   .contact-form,
   .about-highlight,
-  .tech-showcase,
   .skill-category-card,
   .mini-highlight,
   .service-cta-box {
@@ -2127,22 +2047,54 @@ textarea:focus-visible,
     width: 100%;
   }
 
+  .project-card {
+    min-height: auto;
+    padding: 24px 22px;
+  }
+
+  .project-card h3 {
+    font-size: 1.32rem;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  .project-card p {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .project-card .card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+  }
+
+  .tags {
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  .tags span {
+    font-size: 0.78rem;
+    padding: 6px 11px;
+  }
+
   .mouse-glow {
     display: none;
   }
 
   .back-to-top {
-    right: 16px;
-    bottom: 16px;
-    width: 42px;
-    height: 42px;
+    right: 14px;
+    bottom: 22px;
+    width: 44px;
+    height: 44px;
   }
 
   .floating-whatsapp {
-    right: 16px;
-    bottom: 70px;
-    width: 42px;
-    height: 42px;
+    right: 14px;
+    bottom: 78px;
+    width: 44px;
+    height: 44px;
   }
 
   .tech-bubble {
@@ -2181,7 +2133,6 @@ textarea:focus-visible,
   .hero-actions .btn-accent,
   .avatar-wrap,
   .avatar-wrap::before,
-  .tech-showcase::after,
   .floating-whatsapp {
     animation: none !important;
   }
