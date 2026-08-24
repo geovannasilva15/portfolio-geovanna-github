@@ -11,6 +11,9 @@
 
 </div>
 
+![Visão explicativa do projeto Portfólio Geovanna Silva](assets/readme-project-overview.svg)
+
+
 ## Sobre o projeto
 
 Portfólio pessoal desenvolvido para apresentar minha trajetória, competências, serviços e projetos de tecnologia em uma experiência moderna, responsiva e acessível.
