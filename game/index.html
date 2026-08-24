@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Tech Memory Challenge — mini game do portfólio de Geovanna Silva.">
+<meta name="theme-color" content="#0b1020">
+<title>Tech Memory Challenge | Geovanna Silva</title>
+<style>
+:root{--bg:#070b16;--panel:#10172a;--line:#26314f;--text:#eef2ff;--muted:#9aa5c1;--pink:#ec4899;--violet:#8b5cf6;--cyan:#22d3ee;--ok:#34d399}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text);background:radial-gradient(circle at 15% 10%,#25113a 0,transparent 28%),radial-gradient(circle at 85% 20%,#0b3340 0,transparent 28%),var(--bg);display:grid;place-items:center;padding:24px}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:36px 36px}
+.app{width:min(920px,100%);position:relative}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:22px}.eyebrow{font:700 12px ui-monospace,monospace;letter-spacing:.16em;color:var(--cyan);text-transform:uppercase}h1{font-size:clamp(30px,6vw,56px);margin:8px 0 6px;line-height:1;background:linear-gradient(90deg,#fff,#f9a8d4,#a5b4fc);-webkit-background-clip:text;color:transparent}.intro{color:var(--muted);max-width:610px;margin:0;line-height:1.6}.back{color:#d8b4fe;text-decoration:none;border:1px solid #523878;border-radius:999px;padding:10px 14px;white-space:nowrap;background:#180f29}.back:hover{border-color:var(--pink)}
+.hud{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}.stat{background:rgba(16,23,42,.85);border:1px solid var(--line);padding:12px 15px;border-radius:14px}.label{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em}.value{font:800 22px ui-monospace,monospace;margin-top:3px;display:block}
+.board{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:18px;border:1px solid var(--line);border-radius:24px;background:rgba(10,15,30,.78);box-shadow:0 24px 80px #0008;backdrop-filter:blur(12px)}
+.card{aspect-ratio:1.16;border:0;padding:0;background:transparent;perspective:900px;cursor:pointer;border-radius:16px}.card:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}.inner{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}.card.open .inner,.card.matched .inner{transform:rotateY(180deg)}.face{position:absolute;inset:0;display:grid;place-items:center;border-radius:16px;backface-visibility:hidden;border:1px solid #34415f}.front{background:linear-gradient(145deg,#141c34,#0b1020);font:800 28px ui-monospace,monospace;color:#64748b}.front:after{content:"</>";color:var(--pink);text-shadow:0 0 20px #ec489988}.backface{transform:rotateY(180deg);background:linear-gradient(145deg,#25153a,#10293a);padding:8px}.icon{font-size:34px}.tech{font:700 clamp(11px,2vw,15px) ui-monospace,monospace;margin-top:4px}.matched .backface{border-color:var(--ok);box-shadow:0 0 20px #34d39933}
+.actions{display:flex;justify-content:center;gap:12px;margin-top:16px}.btn{border:0;border-radius:999px;padding:12px 20px;color:white;font-weight:800;cursor:pointer;background:linear-gradient(90deg,var(--violet),var(--pink));box-shadow:0 10px 30px #8b5cf633}.btn:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.message{text-align:center;min-height:28px;color:#c4b5fd;font-weight:700;margin:14px 0 0}.modal{position:fixed;inset:0;background:#03050dcc;display:none;place-items:center;padding:24px;z-index:5}.modal.show{display:grid}.dialog{width:min(480px,100%);text-align:center;background:var(--panel);border:1px solid #5b3b79;border-radius:24px;padding:32px;box-shadow:0 30px 100px #000}.dialog h2{font-size:34px;margin:0 0 8px}.dialog p{color:var(--muted);line-height:1.6}
+footer{text-align:center;color:#69738e;font-size:12px;margin-top:20px}
+@media(max-width:650px){.top{display:block}.back{display:inline-block;margin-top:16px}.hud{grid-template-columns:repeat(2,1fr)}.board{grid-template-columns:repeat(3,1fr);gap:8px;padding:10px}.tech{font-size:10px}.icon{font-size:25px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.inner{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<main class="app">
+<header class="top"><div><span class="eyebrow">geovanna.dev / bonus-level</span><h1>Tech Memory</h1><p class="intro">Encontre os pares das tecnologias. Memorize as posições, reduza seus movimentos e estabeleça um novo recorde.</p></div><a class="back" href="https://geovannasilva15.github.io/portfolio-geovanna-github/">← Voltar ao portfólio</a></header>
+<section class="hud" aria-label="Placar"><div class="stat"><span class="label">Pares</span><strong class="value" id="pairs">0/6</strong></div><div class="stat"><span class="label">Movimentos</span><strong class="value" id="moves">0</strong></div><div class="stat"><span class="label">Tempo</span><strong class="value" id="time">00:00</strong></div><div class="stat"><span class="label">Recorde</span><strong class="value" id="best">--</strong></div></section>
+<section class="board" id="board" aria-label="Tabuleiro do jogo da memória"></section>
+<p class="message" id="message" aria-live="polite">Selecione uma carta para começar.</p>
+<div class="actions"><button class="btn" id="restart">↻ Novo jogo</button></div>
+<footer>HTML • CSS • JavaScript • Feito por Geovanna Eduarda da Silva</footer>
+</main>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="resultTitle"><div class="dialog"><span class="eyebrow">challenge completed</span><h2 id="resultTitle">Você venceu! 🚀</h2><p id="result"></p><button class="btn" id="again">Jogar novamente</button></div></div>
+<script>
+const techs=[["🐍","Python"],["⚛️","React"],["☁️","AWS"],["🔷","TypeScript"],["🌿","Git"],["🗄️","Data"]];
+const board=document.querySelector("#board"),movesEl=document.querySelector("#moves"),pairsEl=document.querySelector("#pairs"),timeEl=document.querySelector("#time"),bestEl=document.querySelector("#best"),message=document.querySelector("#message"),modal=document.querySelector("#modal"),result=document.querySelector("#result");
+let open=[],matched=0,moves=0,seconds=0,timer=null,locked=false;
+const shuffle=a=>a.map(v=>({v,n:Math.random()})).sort((a,b)=>a.n-b.n).map(x=>x.v);
+const fmt=s=>String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
+function loadBest(){const b=localStorage.getItem("techMemoryBest");bestEl.textContent=b?b+" mov.":"--"}
+function startTimer(){if(!timer)timer=setInterval(()=>{seconds++;timeEl.textContent=fmt(seconds)},1000)}
+function setup(){clearInterval(timer);timer=null;open=[];matched=0;moves=0;seconds=0;locked=false;board.innerHTML="";movesEl.textContent="0";pairsEl.textContent="0/6";timeEl.textContent="00:00";message.textContent="Selecione uma carta para começar.";modal.classList.remove("show");shuffle([...techs,...techs]).forEach(([icon,name],i)=>{const b=document.createElement("button");b.className="card";b.dataset.name=name;b.setAttribute("aria-label","Carta fechada "+(i+1));b.innerHTML='<span class="inner"><span class="face front"></span><span class="face backface"><span><span class="icon">'+icon+'</span><span class="tech">'+name+'</span></span></span></span>';b.addEventListener("click",()=>flip(b));board.appendChild(b)});loadBest()}
+function flip(card){if(locked||card.classList.contains("open")||card.classList.contains("matched"))return;startTimer();card.classList.add("open");card.setAttribute("aria-label",card.dataset.name);open.push(card);if(open.length<2){message.textContent="Agora encontre o par.";return}moves++;movesEl.textContent=moves;locked=true;const[a,b]=open;if(a.dataset.name===b.dataset.name){setTimeout(()=>{a.classList.add("matched");b.classList.add("matched");a.classList.remove("open");b.classList.remove("open");matched++;pairsEl.textContent=matched+"/6";message.textContent="Par encontrado: "+a.dataset.name+"!";open=[];locked=false;if(matched===6)finish()},420)}else{message.textContent="Não foi dessa vez. Memorize e continue.";setTimeout(()=>{a.classList.remove("open");b.classList.remove("open");a.setAttribute("aria-label","Carta fechada");b.setAttribute("aria-label","Carta fechada");open=[];locked=false},780)}}
+function finish(){clearInterval(timer);timer=null;const old=Number(localStorage.getItem("techMemoryBest")||0),record=!old||moves<old;if(record)localStorage.setItem("techMemoryBest",moves);result.textContent="Você encontrou os 6 pares em "+moves+" movimentos e "+fmt(seconds)+(record?". Novo recorde!":"; seu recorde é "+old+" movimentos.");loadBest();setTimeout(()=>modal.classList.add("show"),500)}
+document.querySelector("#restart").addEventListener("click",setup);document.querySelector("#again").addEventListener("click",setup);setup();
+</script>
+</body>
+</html>
