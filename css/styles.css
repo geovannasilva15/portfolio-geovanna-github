@@ -1394,6 +1394,28 @@ textarea:focus-visible,
   max-width: 100%;
 }
 
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--pink-300);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-link::after {
+  content: "↗";
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.project-link:hover::after,
+.project-link:focus-visible::after {
+  transform: translate(3px, -3px);
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
