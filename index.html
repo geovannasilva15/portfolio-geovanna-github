@@ -198,6 +198,40 @@
       html{scroll-behavior:auto}
       *,*::before,*::after{transition:none!important;animation:none!important}
     }
+
+    .hero-achievement{margin:20px 0 0;font-size:13px;font-weight:700;color:var(--accent)}
+    .hero-achievement a:hover{text-decoration:underline;text-underline-offset:4px}
+    .devready-media{background:radial-gradient(circle at 50% 80%,#31305e 0%,#17172a 72%);flex-direction:column;padding:10px 16px}
+    .devready-media img{width:100%;height:150px;object-fit:contain;filter:drop-shadow(0 11px 18px rgba(0,0,0,.2))}
+    .devready-media-caption{font:700 17px "Space Grotesk",sans-serif;color:#f0e9ff;line-height:1.2}
+    .devready-media-caption span{font:600 10px "DM Sans",sans-serif;color:#b6b4d6}
+    .awards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .award-card{min-width:0;display:flex;flex-direction:column;overflow:hidden;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+    .award-visual{height:178px;display:flex;align-items:center;justify-content:center;flex-direction:column;overflow:hidden;position:relative;border-bottom:1px solid var(--line)}
+    .neural-award{background:linear-gradient(135deg,#1c1728,#2d2038)}
+    .neural-award img{width:100%;height:100%;object-fit:contain;padding:15px}
+    .devready-award{background:radial-gradient(circle at 50% 50%,#333260,#1a1a32)}
+    .devready-award img{width:100%;height:142px;object-fit:contain}
+    .devready-award>span{font:700 16px "Space Grotesk",sans-serif;color:#f2efff;margin-top:-6px}
+    .google-award{background:linear-gradient(150deg,#fdfafa,#e9eaf1);gap:5px;color:#39333d}
+    .google-color-mark{font:700 38px "Space Grotesk",sans-serif;letter-spacing:-.07em;line-height:1.2}
+    .google-color-mark b:nth-child(1),.google-color-mark b:nth-child(4){color:#4285f4}
+    .google-color-mark b:nth-child(2),.google-color-mark b:nth-child(6){color:#ea4335}
+    .google-color-mark b:nth-child(3){color:#fbbc05}
+    .google-color-mark b:nth-child(5){color:#34a853}
+    .google-award strong{font:700 15px "Space Grotesk",sans-serif}
+    .google-award small{font-size:11px;font-weight:600;color:#5c5862}
+    .award-body{padding:22px 23px 24px;display:flex;flex:1;flex-direction:column}
+    .award-type{color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.055em;text-transform:uppercase;margin-bottom:12px}
+    .award-card h3{font-size:23px;margin-bottom:10px}
+    .award-card p{color:var(--muted);font-size:13.5px;margin-bottom:13px}
+    .award-card .award-fineprint{color:var(--subtle);font-size:12px}
+    .award-actions{display:flex;gap:12px;row-gap:5px;flex-wrap:wrap;margin-top:auto;padding-top:10px}
+    .award-actions a{color:var(--accent);font-size:12px;font-weight:700}
+    .award-actions a:hover{text-decoration:underline;text-underline-offset:3px}
+    .award-source-note{color:var(--subtle);font-size:11px;margin:18px 0 0}
+    @media(max-width:920px){.awards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:700px){.awards-grid{grid-template-columns:1fr}.award-visual{height:190px}}
   </style>
 </head>
 <body>
@@ -207,6 +241,7 @@
       <a class="logo" href="#inicio" aria-label="Geovanna, voltar ao início">geovanna<span>.</span></a>
       <nav class="site-nav" id="siteNav" aria-label="Navegação principal">
         <a href="#projetos">Projetos</a>
+        <a href="#conquistas">Conquistas</a>
         <a href="#sobre">Sobre</a>
         <a href="#tecnologias">Tecnologias</a>
         <a href="#trajetoria">Trajetória</a>
@@ -231,7 +266,7 @@
             <a class="btn btn-primary" href="#projetos">Conhecer meus projetos <span aria-hidden="true">↗</span></a>
             <a class="btn" href="https://www.linkedin.com/in/geovannaeduarda/" target="_blank" rel="noopener noreferrer">Meu LinkedIn ↗</a>
           </div>
-          <div class="hero-note"><span>IA generativa</span><span>Python &amp; APIs</span><span>Engenharia de Software</span></div>
+          <div class="hero-note"><span>IA generativa</span><span>Python &amp; APIs</span><span>Engenharia de Software</span></div><p class="hero-achievement"><a href="#conquistas">2× premiada em hackathons · Embaixadora Estudantil Google 2026 <span aria-hidden="true">↗</span></a></p>
         </div>
         <div class="photo-wrap">
           <div class="photo-frame">
@@ -264,20 +299,6 @@
         <p class="sr-only" id="filterFeedback" aria-live="polite"></p>
         <div class="project-grid" id="projectGrid">
           <article class="project" data-type="produto">
-            <div class="project-media graphic beauty-cover" aria-label="Capa gráfica do projeto BeautyFlow">
-              <strong>BeautyFlow</strong><small>GESTÃO · AUTOMAÇÃO · IA APLICADA</small>
-            </div>
-            <div class="project-body">
-              <div class="project-meta"><span class="tag-feature">IA aplicada</span><span>MVP local</span></div>
-              <h3>BeautyFlow AI</h3>
-              <p>Uma plataforma para apoiar a gestão de negócios de beleza: agenda, clientes, serviços e recomendações. Inclui API, interface em Streamlit e assistente de texto que pode usar um LLM quando configurado.</p>
-              <p class="project-footnote">O MVP roda localmente; o uso do LLM depende de chave de API. Não é uma solução pública em produção.</p>
-              <div class="stack-tags"><span>Python</span><span>FastAPI</span><span>Streamlit</span><span>SQLite</span></div>
-              <div class="project-links"><a href="https://github.com/geovannasilva15/beautyflow-ai" target="_blank" rel="noopener noreferrer" aria-label="Ver código e instruções do BeautyFlow AI">Código e execução ↗</a></div>
-            </div>
-          </article>
-
-          <article class="project" data-type="produto">
             <div class="project-media graphic proof-cover" aria-label="Capa gráfica do projeto Proof Before Post">
               <strong>Proof Before Post</strong><small>PAUSE. CHECK THE EVIDENCE. THEN POST.</small>
             </div>
@@ -294,16 +315,49 @@
             </div>
           </article>
 
+          <article class="project" data-type="produto">
+            <div class="project-media graphic beauty-cover" aria-label="Capa gráfica do projeto BeautyFlow">
+              <strong>BeautyFlow</strong><small>GESTÃO · AUTOMAÇÃO · IA APLICADA</small>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span class="tag-feature">IA aplicada</span><span>MVP local</span></div>
+              <h3>BeautyFlow AI</h3>
+              <p>Uma plataforma para apoiar a gestão de negócios de beleza: agenda, clientes, serviços e recomendações. Inclui API, interface em Streamlit e assistente de texto que pode usar um LLM quando configurado.</p>
+              <p class="project-footnote">O MVP roda localmente; o uso do LLM depende de chave de API. Não é uma solução pública em produção.</p>
+              <div class="stack-tags"><span>Python</span><span>FastAPI</span><span>Streamlit</span><span>SQLite</span></div>
+              <div class="project-links"><a href="https://github.com/geovannasilva15/beautyflow-ai" target="_blank" rel="noopener noreferrer" aria-label="Ver código e instruções do BeautyFlow AI">Código e execução ↗</a></div>
+            </div>
+          </article>
+
+
+          <article class="project" data-type="produto">
+            <div class="project-media devready-media">
+              <img src="https://raw.githubusercontent.com/juninhos-comunidade/devready/main/public/brand/mascot-wave.webp" alt="Mascote original do DevReady, utilizado na aplicação da equipe" width="500" height="400" loading="lazy">
+              <span class="devready-media-caption">DevReady <span>• projeto real</span></span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span class="tag-feature">2º lugar · Hackathon</span><span>Aplicação online</span></div>
+              <h3>DevReady</h3>
+              <p>Plataforma de preparação para processos seletivos em tecnologia. A partir de uma vaga, ajuda a identificar competências, praticar questões técnicas e entrevistas e organizar um plano de evolução com apoio de IA.</p>
+              <p class="project-footnote">Projeto colaborativo com Isabela Duarte, João Pedro Panza Mainieri e Eduarda Deiró. Criado no Hackathon Comunidade Juninhos × Nortjobs.</p>
+              <div class="stack-tags"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Prisma</span><span>IA aplicada</span></div>
+              <div class="project-links">
+                <a href="https://devready.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir aplicação DevReady na Vercel">Testar aplicação ↗</a>
+                <a href="https://github.com/juninhos-comunidade/devready" target="_blank" rel="noopener noreferrer" aria-label="Acessar repositório oficial do DevReady">Código do time ↗</a>
+              </div>
+            </div>
+          </article>
+
           <article class="project" data-type="dados">
             <div class="project-media" style="background:#211d2c">
               <img class="neural-image" src="https://raw.githubusercontent.com/geovannasilva15/Neural-rose/main/assets/readme-project-overview.svg" alt="Visão explicativa original do projeto Neural Rose" width="600" height="320" loading="lazy">
             </div>
             <div class="project-body">
-              <div class="project-meta"><span class="tag-feature">2º lugar · Hackathon 2026</span><span>Protótipo</span></div>
+              <div class="project-meta"><span class="tag-feature">2º lugar · Hackathon 2026</span><span>Liderança de equipe</span></div>
               <h3>Neural Rose</h3>
-              <p>Protótipo de apoio à análise de riscos de fornecedores, com indicadores, alertas e simulação de cenários. Desenvolvido para o Hackathon de IA WeHandle × PUC Campinas.</p>
+              <p>Meu primeiro hackathon: liderei a equipe Neural Rose, o único time formado exclusivamente por mulheres no desafio WeHandle × PUC Campinas. Criamos um protótipo de apoio à análise preditiva de riscos de fornecedores.</p><p class="project-footnote">Equipe: Isabela Duarte, Eduarda Deiró, Marília Santos e eu.</p>
               <div class="stack-tags"><span>JavaScript</span><span>Chart.js</span><span>Dados</span><span>UX</span></div>
-              <div class="project-links"><a href="https://github.com/geovannasilva15/Neural-rose" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório do Neural Rose">Conhecer o projeto ↗</a></div>
+              <div class="project-links"><a href="https://github.com/geovannasilva15/Neural-rose" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório do Neural Rose">Conhecer o projeto ↗</a><a href="https://www.linkedin.com/company/liga-de-ti-e-empreendedorismo-puc-campinas/" target="_blank" rel="noopener noreferrer">Publicação do hackathon ↗</a></div>
             </div>
           </article>
 
@@ -336,10 +390,74 @@
       </div>
     </section>
 
+
+    <section class="section section-alt" id="conquistas" aria-labelledby="awards-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">02 / Hackathons &amp; comunidade</span>
+            <h2 class="section-title" id="awards-title">Conquistas que fazem parte da minha história</h2>
+            <p class="section-lead">Projetos construídos em equipe, desafios reais e uma comunidade em que posso aprender e compartilhar. São experiências importantes na minha formação em IA.</p>
+          </div>
+        </div>
+        <div class="awards-grid">
+          <article class="award-card">
+            <div class="award-visual neural-award" aria-label="Identidade visual original do projeto Neural Rose">
+              <img src="https://raw.githubusercontent.com/geovannasilva15/Neural-rose/main/neural-rose-ai-fornecedores/assets/banner-neural-rose.svg" alt="Banner oficial do projeto Neural Rose, feito pela equipe" width="580" height="260" loading="lazy">
+            </div>
+            <div class="award-body">
+              <span class="award-type">🥈 2º lugar · Junho de 2026</span>
+              <h3>Neural Rose — meu primeiro hackathon</h3>
+              <p>Liderei a equipe Neural Rose no Hackathon de IA WeHandle × PUC Campinas. Fomos o único grupo formado inteiramente por mulheres e desenvolvemos uma proposta para antecipar riscos de fornecedores com dados e inteligência preditiva.</p>
+              <p class="award-fineprint">Com Isabela Duarte, Eduarda Deiró e Marília Santos.</p>
+              <div class="award-actions">
+                <a href="https://github.com/geovannasilva15/Neural-rose" target="_blank" rel="noopener noreferrer">Ver projeto ↗</a>
+                <a href="https://www.linkedin.com/company/liga-de-ti-e-empreendedorismo-puc-campinas/" target="_blank" rel="noopener noreferrer">Registro do evento no LinkedIn ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="award-card">
+            <div class="award-visual devready-award" aria-label="Mascote original do DevReady">
+              <img src="https://raw.githubusercontent.com/juninhos-comunidade/devready/main/public/brand/mascot-coach.webp" alt="Mascote original da plataforma DevReady" width="430" height="260" loading="lazy">
+              <span>DevReady</span>
+            </div>
+            <div class="award-body">
+              <span class="award-type">🥈 2º lugar · Hackathon 2026</span>
+              <h3>DevReady — IA para a carreira tech</h3>
+              <p>Ao lado de Isabela Duarte, João Pedro Panza Mainieri e Eduarda Deiró, participei da construção de uma plataforma que transforma requisitos de vagas em diagnóstico, prática de entrevistas e um plano de desenvolvimento.</p>
+              <p class="award-fineprint">Hackathon Comunidade Juninhos × Nortjobs. Projeto em equipe com aplicação publicada.</p>
+              <div class="award-actions">
+                <a href="https://devready.vercel.app/" target="_blank" rel="noopener noreferrer">Conhecer a aplicação ↗</a>
+                <a href="https://nortjobs.com/pt-BR/blog/hackathon-juninhos-nort-2026" target="_blank" rel="noopener noreferrer">Premiação oficial ↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="award-card">
+            <div class="award-visual google-award" role="img" aria-label="Tipografia identificando o programa Embaixadores Estudantis do Google, sem fotografia de terceiros">
+              <span class="google-color-mark" aria-hidden="true"><b>G</b><b>o</b><b>o</b><b>g</b><b>l</b><b>e</b></span>
+              <strong>Student Ambassador</strong>
+              <small>2026 · Comunidade &amp; educação</small>
+            </div>
+            <div class="award-body">
+              <span class="award-type">Voluntariado · Desde agosto de 2026</span>
+              <h3>Embaixadora Estudantil Google</h3>
+              <p>Faço parte do programa de Embaixadores Estudantis do Google 2026, uma comunidade que conecta estudantes para aprender, trocar experiências e compartilhar conhecimentos sobre tecnologia e Google Gemini.</p>
+              <p class="award-fineprint">Recebi meu kit do programa em outubro de 2026 e compartilhei a conquista no LinkedIn.</p>
+              <div class="award-actions">
+                <a href="https://www.linkedin.com/in/geovannaeduarda/recent-activity/all/" target="_blank" rel="noopener noreferrer">Minhas publicações no LinkedIn ↗</a>
+                <a href="https://www.linkedin.com/in/geovannaeduarda/" target="_blank" rel="noopener noreferrer">Voluntariado no perfil ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="award-source-note">Imagens: identidade do Neural Rose e mascote do DevReady, obtidos nos repositórios originais. As fotografias específicas da equipe e do kit não estão publicadas em arquivos de imagem estáveis acessíveis nesta versão; os registros permanecem vinculados aos perfis e publicações do evento.</p>
+      </div>
+    </section>
+
     <section class="section section-alt" id="sobre" aria-labelledby="about-title">
       <div class="container about-grid">
         <div>
-          <span class="section-kicker">02 / Sobre mim</span>
+          <span class="section-kicker">03 / Sobre mim</span>
           <h2 class="section-title" id="about-title">Tecnologia, curiosidade e vontade de construir.</h2>
           <p class="about-intro">Sou <strong>Analista de Inteligência Artificial</strong>, formada em Gestão da Tecnologia da Informação, com pós-graduação concluída em <strong>IA e Machine Learning</strong>. Hoje curso Engenharia de Software e busco evoluir criando soluções que sejam úteis, compreensíveis e bem construídas.</p>
           <a class="text-link" href="https://www.linkedin.com/in/geovannaeduarda/" target="_blank" rel="noopener noreferrer">Conheça minha trajetória no LinkedIn ↗</a>
@@ -356,7 +474,7 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="section-kicker">03 / Tecnologias</span>
+            <span class="section-kicker">04 / Tecnologias</span>
             <h2 class="section-title" id="skills-title">Minha caixa de ferramentas</h2>
             <p class="section-lead">Conhecimentos que aparecem na minha formação e nos projetos publicados, com espaço para continuar evoluindo.</p>
           </div>
@@ -372,7 +490,7 @@
 
     <section class="section section-alt" id="trajetoria" aria-labelledby="journey-title">
       <div class="container">
-        <span class="section-kicker">04 / Experiência &amp; formação</span>
+        <span class="section-kicker">05 / Experiência &amp; formação</span>
         <h2 class="section-title" id="journey-title">Meu caminho até aqui</h2>
         <div class="journey-grid" style="margin-top:34px">
           <div>
@@ -406,7 +524,7 @@
       <div class="container">
         <div class="contact-panel">
           <div>
-            <span class="section-kicker">05 / Contato</span>
+            <span class="section-kicker">06 / Contato</span>
             <h2 id="contact-title">Vamos conversar sobre tecnologia e IA?</h2>
             <p>Estou aberta a conexões, aprendizado e oportunidades para construir soluções com Inteligência Artificial e Engenharia de Software.</p>
             <div class="contact-links">
