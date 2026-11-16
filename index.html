@@ -276,7 +276,12 @@
     .beauty-product-note{font:600 9px "DM Sans",sans-serif;color:#9b7186}
     @media(max-width:700px){.hero{padding:54px 0 70px}.hero-grid{grid-template-columns:1fr;gap:45px}.project-media{height:208px}.award-visual{height:190px}.photo-caption{left:0}.project-body{padding:22px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project,.btn{transition:none}}
-  </style>
+  
+    /* Fotografias reais de eventos e comunidade */
+    .neural-award img { object-fit:contain; padding:8px; }
+    .google-photo { background:#f6f3f7; }
+    .google-photo img { width:100%; height:100%; object-fit:contain; padding:10px; }
+</style>
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -408,7 +413,7 @@
         <div class="awards-grid">
           <article class="award-card">
             <div class="award-visual neural-award" aria-label="Identidade visual original do projeto Neural Rose">
-              <img src="https://raw.githubusercontent.com/geovannasilva15/Neural-rose/main/neural-rose-ai-fornecedores/assets/banner-neural-rose.svg" alt="Banner oficial do projeto Neural Rose, feito pela equipe" width="580" height="260" loading="lazy">
+              <img src="./assets/img/neural-rose-evento.webp" alt="Banner oficial do projeto Neural Rose, feito pela equipe" width="580" height="260" loading="lazy">
             </div>
             <div class="award-body">
               <span class="award-type">🥈 2º lugar · Junho de 2026</span>
@@ -438,11 +443,7 @@
             </div>
           </article>
           <article class="award-card">
-            <div class="award-visual google-award" role="img" aria-label="Tipografia identificando o programa Embaixadores Estudantis do Google, sem fotografia de terceiros">
-              <span class="google-color-mark" aria-hidden="true"><b>G</b><b>o</b><b>o</b><b>g</b><b>l</b><b>e</b></span>
-              <strong>Student Ambassador</strong>
-              <small>2026 · Comunidade &amp; educação</small>
-            </div>
+            <div class="award-visual google-photo"><img src="./assets/img/google-kit-embaixadora.webp" alt="Fotografia do kit de Embaixadora Estudantil Google recebido por Geovanna" width="251" height="189" loading="lazy"></div>
             <div class="award-body">
               <span class="award-type">Voluntariado · Desde agosto de 2026</span>
               <h3>Embaixadora Estudantil Google</h3>
