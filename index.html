@@ -232,6 +232,50 @@
     .award-source-note{color:var(--subtle);font-size:11px;margin:18px 0 0}
     @media(max-width:920px){.awards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:700px){.awards-grid{grid-template-columns:1fr}.award-visual{height:190px}}
+
+
+    /* 2026 portfolio refinement: editorial layout, real media and accessibility */
+    .hero{padding:88px 0 88px}
+    .hero-grid{grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);gap:58px}
+    .hero .intro{line-height:1.67;max-width:610px}
+    .photo-frame{transform:none;border-radius:20px;padding:8px}
+    .photo-frame img{border-radius:13px}
+    .photo-caption{transform:none;left:-20px;bottom:-18px}
+    .project-grid{gap:22px}
+    .project,.award-card{border-radius:16px;box-shadow:0 9px 35px rgba(0,0,0,.055)}
+    .project-media{height:235px;min-height:200px}
+    .project-media img{object-position:center}
+    .project-body{padding:25px}
+    .project h3{font-size:24px}
+    .award-visual{height:205px}
+    .devready-real{background:#f4f2fb;padding:18px}
+    .devready-real img{width:100%;height:100%;object-fit:contain;image-rendering:auto;filter:drop-shadow(0 8px 18px rgba(20,20,40,.12))}
+    .neural-award{background:#1d1723}
+    .neural-award img{padding:9px}
+    .proof-product{background:linear-gradient(140deg,#151a2b,#29263d 65%,#3e2944);padding:22px}
+    .product-window{width:92%;max-width:440px;height:185px;background:#f9f7f4;border:1px solid rgba(255,255,255,.22);border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,.32);overflow:hidden;transform:rotate(-2deg)}
+    .product-top{height:27px;background:#f1eeeb;border-bottom:1px solid #e5e0dc;display:flex;align-items:center;gap:5px;padding:0 12px}
+    .product-top span{width:7px;height:7px;background:#d8cdd0;border-radius:50%}
+    .product-top em{font:500 9px "DM Sans",sans-serif;color:#777;letter-spacing:.02em;margin-left:auto;font-style:normal}
+    .product-inner{padding:23px 24px}
+    .product-inner small{display:block;font:700 9px "DM Sans",sans-serif;color:#98667b;letter-spacing:.16em}
+    .product-inner strong{display:block;font:700 22px/1.18 "Space Grotesk",sans-serif;color:#2b2930;letter-spacing:-.04em;margin:10px 0 16px}
+    .product-actions{display:flex;gap:6px}
+    .product-actions i{font:600 9px "DM Sans",sans-serif;color:#6d5966;background:#f1e8ee;border:1px solid #e6dbe3;border-radius:4px;padding:5px 10px;font-style:normal}
+    .beauty-product{background:linear-gradient(140deg,#f2e1e8,#f8eef2);padding:22px}
+    .beauty-product-ui{width:92%;max-width:440px;height:185px;background:#fff;border:1px solid #eadbe1;border-radius:12px;box-shadow:0 16px 36px rgba(94,37,61,.13);padding:18px 20px;transform:rotate(2deg)}
+    .beauty-product-head{display:flex;align-items:center;justify-content:space-between;color:#542a42}
+    .beauty-product-head span{font:700 19px "Space Grotesk",sans-serif}
+    .beauty-product-head small{font:700 8px "DM Sans",sans-serif;letter-spacing:.08em;color:#9b7186}
+    .beauty-product-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+    .beauty-product-stats i{background:#f7eff3;border:1px solid #f0e2e9;border-radius:6px;padding:10px 6px;font:600 10px "DM Sans",sans-serif;font-style:normal;color:#78465d;text-align:center}
+    .beauty-product-lines{display:grid;gap:6px;margin-top:13px}
+    .beauty-product-lines span{height:5px;background:#f2e7ed;border-radius:5px}
+    .beauty-product-lines span:nth-child(2){width:78%}
+    .beauty-product-lines span:nth-child(3){width:58%}
+    .beauty-product-note{font:600 9px "DM Sans",sans-serif;color:#9b7186}
+    @media(max-width:700px){.hero{padding:54px 0 70px}.hero-grid{grid-template-columns:1fr;gap:45px}.project-media{height:208px}.award-visual{height:190px}.photo-caption{left:0}.project-body{padding:22px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project,.btn{transition:none}}
   </style>
 </head>
 <body>
@@ -258,14 +302,14 @@
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">Analista de Treinamentos de Inteligência Artificial · Itu, SP</p>
+          <p class="eyebrow">Inteligência Artificial · Desenvolvimento de Software · Itu, SP</p>
           <h1 id="hero-title">Geovanna Eduarda <span>da Silva.</span></h1>
-          <p class="intro">Gosto de transformar problemas reais em ferramentas úteis. Neste espaço, compartilho o que construo, testo e aprendo com Inteligência Artificial e desenvolvimento de software.</p>
+          <p class="intro">Transformo ideias em aplicações que resolvem problemas reais. Trabalho com Inteligência Artificial e desenvolvo projetos com Python, APIs e produtos digitais — sempre com foco em aprender, testar e entregar soluções úteis.</p>
           <div class="hero-buttons">
             <a class="btn btn-primary" href="#projetos">Conhecer meus projetos <span aria-hidden="true">↗</span></a>
             <a class="btn" href="https://www.linkedin.com/in/geovannaeduarda/" target="_blank" rel="noopener noreferrer">Meu LinkedIn ↗</a>
           </div>
-          <div class="hero-note"><span>IA generativa</span><span>Python &amp; APIs</span><span>Engenharia de Software</span></div>
+          <div class="hero-note"><span>Python &amp; FastAPI</span><span>IA generativa</span><span>Projetos com código aberto</span></div>
         </div>
         <div class="photo-wrap">
           <div class="photo-frame">
@@ -286,14 +330,14 @@
           <div>
             <span class="section-kicker">01 / Projetos selecionados</span>
             <h2 class="section-title" id="projects-title">O que venho construindo</h2>
-            <p class="section-lead">Aplicações e experimentos publicados, com código e demonstrações quando disponíveis.</p>
+            <p class="section-lead">Produtos, protótipos e código. Cada projeto apresenta o problema, a solução e o estágio real de desenvolvimento.</p>
           </div>
           <a href="https://github.com/geovannasilva15?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-link">Ver todo o GitHub ↗</a>
         </div>
         <div class="project-grid">
           <article class="project">
-            <div class="project-media graphic proof-cover" aria-label="Capa gráfica do projeto Proof Before Post">
-              <strong>Proof Before Post</strong><small>PAUSE. CHECK THE EVIDENCE. THEN POST.</small>
+            <div class="project-media proof-product" aria-label="Identidade do produto Proof Before Post">
+              <div class="product-window" aria-hidden="true"><div class="product-top"><span></span><span></span><span></span><em>proof-before-post</em></div><div class="product-inner"><small>PROOF BEFORE POST</small><strong>Pause. Check the evidence.<br>Then post.</strong><div class="product-actions"><i>Claim</i><i>Evidence</i><i>Review</i></div></div></div>
             </div>
             <div class="project-body">
               <div class="project-meta"><span class="tag-feature">IA &amp; produto</span><span>Demonstração online</span></div>
@@ -309,8 +353,8 @@
           </article>
 
           <article class="project">
-            <div class="project-media graphic beauty-cover" aria-label="Capa gráfica do projeto BeautyFlow">
-              <strong>BeautyFlow</strong><small>GESTÃO · AUTOMAÇÃO · IA APLICADA</small>
+            <div class="project-media beauty-product" aria-label="Prévia esquemática da arquitetura real do BeautyFlow AI">
+              <div class="beauty-product-ui" aria-hidden="true"><div class="beauty-product-head"><span>BeautyFlow</span><small>PAINEL DE GESTÃO</small></div><div class="beauty-product-stats"><i>Agenda</i><i>Clientes</i><i>Serviços</i></div><div class="beauty-product-lines"><span></span><span></span><span></span></div><small class="beauty-product-note">FastAPI · Streamlit · SQLite</small></div>
             </div>
             <div class="project-body">
               <div class="project-meta"><span class="tag-feature">IA aplicada</span><span>MVP local</span></div>
@@ -357,8 +401,8 @@
         <div class="section-head">
           <div>
             <span class="section-kicker">02 / Conquistas</span>
-            <h2 class="section-title" id="awards-title">Hackathons e comunidade</h2>
-            <p class="section-lead">Os desafios e as pessoas que marcaram minha trajetória fora da sala de aula.</p>
+            <h2 class="section-title" id="awards-title">Conquistas que viraram experiência</h2>
+            <p class="section-lead">Liderança, colaboração e projetos desenvolvidos em equipe, além do meu envolvimento com a comunidade de tecnologia.</p>
           </div>
         </div>
         <div class="awards-grid">
@@ -378,9 +422,8 @@
             </div>
           </article>
           <article class="award-card">
-            <div class="award-visual devready-award" aria-label="Mascote original do DevReady">
-              <img src="https://raw.githubusercontent.com/juninhos-comunidade/devready/main/public/brand/mascot-coach.webp" alt="Mascote original da plataforma DevReady" width="430" height="260" loading="lazy">
-              <span>DevReady</span>
+            <div class="award-visual devready-real" aria-label="Captura de tela real do DevReady">
+              <img src="./assets/img/devready-captura.webp" alt="Captura real da interface do DevReady" width="211" height="133" loading="lazy">
             </div>
             <div class="award-body">
               <span class="award-type">🥈 2º lugar · Hackathon 2026</span>
@@ -420,11 +463,11 @@
       <div class="container about-grid">
         <div>
           <span class="section-kicker">03 / Sobre mim</span>
-          <h2 class="section-title" id="about-title">Curiosidade que vira projeto.</h2>
+          <h2 class="section-title" id="about-title">Tecnologia com propósito e execução.</h2>
         </div>
         <div>
-          <p class="about-intro">Aprendo melhor quando posso colocar uma ideia em prática. Gosto de começar entendendo o problema, experimentar soluções e descobrir como torná-las simples de usar.</p>
-          <p class="section-lead" style="margin-bottom:20px">A troca de ideias, o trabalho em equipe e a comunicação clara fazem parte da maneira como gosto de construir e aprender.</p>
+          <p class="about-intro">Sou formada em Gestão de Tecnologia da Informação, pós-graduada em Inteligência Artificial e Machine Learning e estudante de Engenharia de Software. Gosto de entender um problema a fundo e construir uma solução que possa ser testada, usada e melhorada.</p>
+          <p class="section-lead" style="margin-bottom:20px">Na CorujaRH, atuo com treinamentos apoiados por IA. Fora do trabalho, desenvolvo aplicações, participo de hackathons e ensino tecnologia. Quero crescer em engenharia de IA com uma base sólida de software, qualidade e responsabilidade.</p>
           <a class="text-link" href="https://www.linkedin.com/in/geovannaeduarda/" target="_blank" rel="noopener noreferrer">Mais sobre mim no LinkedIn ↗</a>
         </div>
       </div>
@@ -485,7 +528,7 @@
   </main>
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year">2026</span> Geovanna Eduarda da Silva. Feito para mostrar o que estou aprendendo e construindo.</p>
+      <p>© <span id="year">2026</span> Geovanna Eduarda da Silva. Projetos, experiências e aprendizado contínuo.</p>
       <a href="#inicio">Voltar ao início ↑</a>
     </div>
   </footer>
