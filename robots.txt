@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://geovannasilva15.github.io/portfolio-geovanna-github/sitemap.xml
