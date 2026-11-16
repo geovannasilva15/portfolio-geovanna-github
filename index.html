@@ -281,6 +281,21 @@
     .neural-award img { object-fit:contain; padding:8px; }
     .google-photo { background:#f6f3f7; }
     .google-photo img { width:100%; height:100%; object-fit:contain; padding:10px; }
+
+    /* Cards de projetos com evidências visuais e navegação para estudos de caso */
+    .project-media.project-screenshot{display:block;background:#e9eaf1;position:relative}
+    .project-media.project-screenshot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .3s ease}
+    .project-media.project-screenshot:hover img{transform:scale(1.025)}
+    .project-media-label{position:absolute;bottom:10px;left:11px;right:11px;max-width:max-content;padding:6px 10px;border-radius:6px;background:rgba(16,17,25,.88);color:#fff;font:700 10px/1.3 "DM Sans",sans-serif;letter-spacing:.015em;backdrop-filter:blur(10px)}
+    .project-links{gap:10px;align-items:center}
+    .project-links .project-case-link{display:inline-flex;align-items:center;padding:10px 13px;border-radius:9px;background:var(--accent);color:#20131d;font-weight:800}
+    .project-links .project-case-link:hover{text-decoration:none;background:var(--accent-strong)}
+    .etl-preview{align-items:flex-start;justify-content:center;gap:9px;text-align:left;padding:27px 31px}
+    .etl-preview-eyebrow{font:700 10px "DM Sans",sans-serif;letter-spacing:.17em;color:#a9cce4}
+    .etl-preview strong{font-size:clamp(31px,4vw,48px);letter-spacing:-.06em}
+    .etl-preview small{font-size:13px;letter-spacing:0}
+    .etl-preview-footer{display:inline-flex;padding:8px 11px;margin-top:7px;border:1px solid rgba(255,255,255,.24);border-radius:7px;font-size:11px;color:#e6edf8}
+    @media(prefers-reduced-motion:reduce){.project-media.project-screenshot img{transition:none}}
 </style>
 </head>
 <body>
@@ -335,22 +350,23 @@
           <div>
             <span class="section-kicker">01 / Projetos selecionados</span>
             <h2 class="section-title" id="projects-title">O que venho construindo</h2>
-            <p class="section-lead">Produtos, protótipos e código. Cada projeto apresenta o problema, a solução e o estágio real de desenvolvimento.</p>
+            <p class="section-lead">Projetos reais, código e decisões técnicas. Explore cada estudo de caso para conhecer o problema, a solução e o que foi implementado.</p>
           </div>
           <a href="https://github.com/geovannasilva15?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-link">Ver todo o GitHub ↗</a>
         </div>
         <div class="project-grid">
           <article class="project">
-            <div class="project-media proof-product" aria-label="Identidade do produto Proof Before Post">
-              <div class="product-window" aria-hidden="true"><div class="product-top"><span></span><span></span><span></span><em>proof-before-post</em></div><div class="product-inner"><small>PROOF BEFORE POST</small><strong>Pause. Check the evidence.<br>Then post.</strong><div class="product-actions"><i>Claim</i><i>Evidence</i><i>Review</i></div></div></div>
-            </div>
+            <a class="project-media project-screenshot" href="./projetos/proof-before-post.html" aria-label="Conhecer o estudo de caso do Proof Before Post">
+              <img src="./assets/img/proof-interface-from-source.webp" alt="Prévia fiel da tela inicial do Proof Before Post, renderizada a partir do código-fonte" width="1440" height="840" loading="lazy">
+              <span class="project-media-label">Prévia da interface · código-fonte</span>
+            </a>
             <div class="project-body">
               <div class="project-meta"><span class="tag-feature">IA &amp; produto</span><span>Demonstração online</span></div>
               <h3>Proof Before Post</h3>
               <p>Ferramenta bilíngue de educação midiática para revisar afirmações, comparar evidências e registrar o processo de checagem antes de publicar um conteúdo. A decisão permanece com a pessoa usuária.</p>
               <p class="project-footnote">Projeto em equipe com Matheus Barcelli Marques de Lima.</p>
               <div class="stack-tags"><span>Next.js</span><span>TypeScript</span><span>React</span><span>OpenAI API</span></div>
-              <div class="project-links">
+              <div class="project-links"><a class="project-case-link" href="./projetos/proof-before-post.html" aria-label="Ler estudo de caso de Proof Before Post">Explorar projeto ↗</a>
                 <a href="https://proof-before-post.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demonstração do Proof Before Post">Ver demonstração ↗</a>
                 <a href="https://github.com/geovannasilva15/proof-before-post" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório do Proof Before Post">Código ↗</a>
               </div>
@@ -358,42 +374,46 @@
           </article>
 
           <article class="project">
-            <div class="project-media beauty-product" aria-label="Prévia esquemática da arquitetura real do BeautyFlow AI">
-              <div class="beauty-product-ui" aria-hidden="true"><div class="beauty-product-head"><span>BeautyFlow</span><small>PAINEL DE GESTÃO</small></div><div class="beauty-product-stats"><i>Agenda</i><i>Clientes</i><i>Serviços</i></div><div class="beauty-product-lines"><span></span><span></span><span></span></div><small class="beauty-product-note">FastAPI · Streamlit · SQLite</small></div>
-            </div>
+            <a class="project-media project-screenshot" href="./projetos/beautyflow-ai.html" aria-label="Conhecer o estudo de caso do BeautyFlow AI">
+              <img src="./assets/img/beautyflow-site-captura.webp" alt="Captura da página pública de apresentação do BeautyFlow AI, com painel ilustrativo" width="1440" height="860" loading="lazy">
+              <span class="project-media-label">Captura da página pública · painel ilustrativo</span>
+            </a>
             <div class="project-body">
               <div class="project-meta"><span class="tag-feature">IA aplicada</span><span>MVP local</span></div>
               <h3>BeautyFlow AI</h3>
               <p>Uma plataforma para apoiar a gestão de negócios de beleza: agenda, clientes, serviços e recomendações. Inclui API, interface em Streamlit e assistente de texto que pode usar um LLM quando configurado.</p>
               <p class="project-footnote">O MVP roda localmente; o uso do LLM depende de chave de API. Não é uma solução pública em produção.</p>
               <div class="stack-tags"><span>Python</span><span>FastAPI</span><span>Streamlit</span><span>SQLite</span></div>
-              <div class="project-links"><a href="https://github.com/geovannasilva15/beautyflow-ai" target="_blank" rel="noopener noreferrer" aria-label="Ver código e instruções do BeautyFlow AI">Código e execução ↗</a></div>
+              <div class="project-links"><a class="project-case-link" href="./projetos/beautyflow-ai.html" aria-label="Ler estudo de caso de BeautyFlow AI">Explorar projeto ↗</a><a href="https://github.com/geovannasilva15/beautyflow-ai" target="_blank" rel="noopener noreferrer" aria-label="Ver código e instruções do BeautyFlow AI">Código e execução ↗</a></div>
             </div>
           </article>
 
           <article class="project">
-            <div class="project-media" style="background:#e8eee9">
+            <a class="project-media project-screenshot" href="./projetos/clarivoz.html" aria-label="Conhecer o estudo de caso do ClariVoz">
               <img src="https://raw.githubusercontent.com/geovannasilva15/clarivoz/main/docs/screenshots/inicio.png" alt="Captura real da interface inicial do ClariVoz" width="512" height="324" loading="lazy">
-            </div>
+              <span class="project-media-label">Captura real do protótipo</span>
+            </a>
             <div class="project-body">
               <div class="project-meta"><span class="tag-feature">Acessibilidade</span><span>Protótipo</span></div>
               <h3>ClariVoz</h3>
               <p>Experiência de tecnologia assistiva com leitura em voz alta, simplificação demonstrativa de textos e ajustes visuais. Um projeto sobre tornar informações digitais mais acessíveis.</p>
               <div class="stack-tags"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Web Speech API</span></div>
-              <div class="project-links"><a href="https://github.com/geovannasilva15/clarivoz" target="_blank" rel="noopener noreferrer" aria-label="Ver código e capturas reais do ClariVoz">Código e capturas ↗</a></div>
+              <div class="project-links"><a class="project-case-link" href="./projetos/clarivoz.html" aria-label="Ler estudo de caso de ClariVoz">Explorar projeto ↗</a><a href="https://github.com/geovannasilva15/clarivoz" target="_blank" rel="noopener noreferrer" aria-label="Ver código e capturas reais do ClariVoz">Código e capturas ↗</a></div>
             </div>
           </article>
 
           <article class="project">
-            <div class="project-media graphic etl-cover" aria-label="Capa gráfica do pipeline ETL em Python">
-              <strong>Python ETL</strong><small>EXTRAÇÃO → TRATAMENTO → RESULTADOS</small>
-            </div>
+            <a class="project-media graphic etl-cover etl-preview" href="./projetos/pipeline-etl-python.html" aria-label="Conhecer o estudo de caso do Pipeline ETL com Python">
+              <span class="etl-preview-eyebrow">DADOS REAIS DO REPOSITÓRIO</span>
+              <strong>5 registros</strong><small>Entrada CSV → Python → Saídas CSV e JSON</small>
+              <span class="etl-preview-footer">5 de 5 mensagens dentro do limite documentado</span>
+            </a>
             <div class="project-body">
               <div class="project-meta"><span class="tag-feature">Dados &amp; Python</span><span>Execução local</span></div>
               <h3>Pipeline ETL com Python</h3>
               <p>Pipeline de extração, transformação e exportação de dados fictícios, com geração de mensagens contextualizadas. Roda sem serviços externos e permite integração opcional com a API da OpenAI.</p>
               <div class="stack-tags"><span>Python</span><span>Pandas</span><span>CSV / JSON</span><span>OpenAI opcional</span></div>
-              <div class="project-links"><a href="https://github.com/geovannasilva15/Etl-python-ia" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório do pipeline ETL com Python">Ver pipeline ↗</a></div>
+              <div class="project-links"><a class="project-case-link" href="./projetos/pipeline-etl-python.html" aria-label="Ler estudo de caso de Pipeline ETL com Python">Explorar projeto ↗</a><a href="https://github.com/geovannasilva15/Etl-python-ia" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório do pipeline ETL com Python">Ver pipeline ↗</a></div>
             </div>
           </article>
         </div>

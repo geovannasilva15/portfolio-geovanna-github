@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0c0c12">
+<meta name="description" content="Estudo de caso do Proof Before Post, plataforma de educação midiática criada por Geovanna Eduarda da Silva e Matheus Barcelli Marques de Lima.">
+<meta name="author" content="Geovanna Eduarda da Silva">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Proof Before Post | Projetos de Geovanna Eduarda">
+<meta property="og:description" content="Uma experiência bilíngue para revisar afirmações, analisar fontes e registrar decisões editoriais antes de publicar conteúdo.">
+<link rel="canonical" href="https://geovannasilva15.github.io/portfolio-geovanna-github/projetos/proof-before-post.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/cases.css">
+<title>Proof Before Post | Geovanna Eduarda da Silva</title>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header"><div class="container head-inner"><a class="logo" href="../index.html#inicio" aria-label="Geovanna, voltar à página inicial">geovanna<span>.</span></a><div class="head-links"><a href="../index.html#projetos">← Projetos</a><button class="theme-toggle" id="themeToggle" type="button" aria-label="Ativar tema claro" title="Alternar tema">☀</button></div></div></header>
+<main id="conteudo">
+<section class="container case-hero">
+<a class="back-link" href="../index.html#projetos">← Voltar ao portfólio</a>
+<p class="eyebrow">01 / ESTUDO DE CASO · IA generativa e educação midiática</p>
+<h1>Proof Before Post</h1>
+<p class="case-lead">Uma experiência bilíngue para revisar afirmações, analisar fontes e registrar decisões editoriais antes de publicar conteúdo.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="https://proof-before-post.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir demonstração ↗</a><a class="btn" href="https://github.com/geovannasilva15/proof-before-post" target="_blank" rel="noopener noreferrer">Ver código no GitHub ↗</a></div>
+<div class="tag-row"><span class="tag status">Demonstração online</span><span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">OpenAI Responses API</span></div>
+</section>
+<div class="container"><figure class="case-visual visual-light"><img src="../assets/img/proof-interface-from-source.webp" alt="Prévia da tela inicial do Proof Before Post reproduzida a partir do código-fonte do projeto" width="1440" height="840" loading="eager"><figcaption>Prévia fiel da tela inicial, renderizada a partir do código-fonte. Não é uma captura do site publicado.</figcaption></figure></div>
+<div class="container case-layout">
+<article class="case-article">
+<section class="case-section"><span class="section-label">01 / Contexto</span><h2>O problema que motivou o projeto</h2><p>Quem cria conteúdo precisa avaliar afirmações e fontes antes de publicar, mas nem sempre dispõe de um processo claro para documentar essa revisão. O projeto transforma esse cuidado em uma sequência guiada e repetível.</p></section>
+<section class="case-section"><span class="section-label">02 / Produto</span><h2>O que foi construído</h2><div class="feature-list"><div class="feature"><strong>Revisão guiada</strong><span>Entrada de texto ou URL pública, seleção de afirmações e comparação de evidências.</span></div>
+<div class="feature"><strong>Fontes verificáveis</strong><span>Organização de até três fontes com metadados e espaço para avaliar sua relação com a afirmação.</span></div>
+<div class="feature"><strong>Evidence Receipt</strong><span>Registro do processo editorial, com exportação em PDF, PNG ou texto.</span></div>
+<div class="feature"><strong>Acessibilidade e idiomas</strong><span>Interface em português e inglês, narração pelo navegador e navegação por teclado.</span></div></div></section>
+<section class="case-section"><span class="section-label">03 / Funcionamento</span><h2>Como a solução funciona</h2><ol class="steps"><li><span class="num">01</span><div><strong>Começar pela afirmação</strong><span>Inserir um rascunho, publicação ou URL pública e identificar o que precisa ser verificado.</span></div></li>
+<li><span class="num">02</span><div><strong>Examinar as fontes</strong><span>Comparar evidências e registrar o que elas realmente sustentam — inclusive incertezas e limites.</span></div></li>
+<li><span class="num">03</span><div><strong>Revisar com autonomia</strong><span>A pessoa usuária decide como ajustar o conteúdo e documenta a análise no Evidence Receipt.</span></div></li></ol></section>
+<section class="case-section"><span class="section-label">04 / Engenharia</span><h2>O que o código demonstra</h2><p>A aplicação usa Next.js e TypeScript, com integração à OpenAI Responses API. O repositório reúne testes de produto e fluxos de ponta a ponta com Playwright, além de controles para a importação de URLs e recursos de exportação.</p></section>
+<section class="case-section"><span class="section-label">05 / Transparência</span><h2>Estágio atual e limites</h2><p>O Evidence Receipt documenta o processo de revisão; não é um certificado de veracidade. A decisão editorial continua sendo humana. A captura exibida acima foi renderizada a partir do código da interface, pois não foi possível obter um print do ambiente publicado nesta atualização.</p><p class="note"><strong>Autoria e participação.</strong> Desenvolvido em equipe por Geovanna Eduarda da Silva e Matheus Barcelli Marques de Lima. O repositório apresenta o projeto e suas instruções de execução.</p></section>
+
+</article>
+<aside class="case-aside" aria-label="Ficha técnica do projeto"><h2>Ficha do projeto</h2>
+<div class="fact"><small>Categoria</small><p>IA generativa e educação midiática</p></div>
+<div class="fact"><small>Estágio</small><p>Demonstração online</p></div>
+<div class="fact"><small>Tecnologias</small><div class="tech-list"><span>Next.js 16</span><span>React 19</span><span>TypeScript</span><span>OpenAI Responses API</span><span>Playwright</span><span>jsPDF</span></div></div>
+<div class="fact"><small>Código-fonte</small><p><a href="https://github.com/geovannasilva15/proof-before-post" target="_blank" rel="noopener noreferrer">Repositório no GitHub ↗</a></p></div>
+<div class="fact"><small>Link público</small><p><a href="https://proof-before-post.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir projeto ↗</a></p></div>
+<div class="fact"><small>Voltar</small><p><a href="../index.html#projetos">Todos os projetos ←</a></p></div>
+</aside>
+</div>
+</main>
+<footer class="case-footer"><div class="container footer-inner"><p>© Geovanna Eduarda da Silva · Portfólio de projetos</p><a href="beautyflow-ai.html">Próximo estudo de caso: BeautyFlow AI →</a></div></footer>
+<script>(function(){var root=document.documentElement;var btn=document.getElementById('themeToggle');function setTheme(mode){mode=mode==='light'?'light':'dark';root.setAttribute('data-theme',mode);btn.textContent=mode==='dark'?'☀':'☾';btn.setAttribute('aria-label',mode==='dark'?'Ativar tema claro':'Ativar tema escuro');try{localStorage.setItem('geovanna-theme',mode)}catch(e){}}try{var saved=localStorage.getItem('geovanna-theme');if(saved)setTheme(saved)}catch(e){}btn.addEventListener('click',function(){setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark')})})();</script>
+</body></html>
