@@ -13,7 +13,7 @@
   <meta property="og:title" content="Geovanna Eduarda da Silva | IA Generativa & Engenharia de Software">
   <meta property="og:description" content="Projetos, trajetória e experiências reais em inteligência artificial, Python e desenvolvimento de produtos.">
   <meta property="og:url" content="https://geovannasilva15.github.io/portfolio-geovanna-github/">
-  <meta property="og:image" content="https://geovannasilva15.github.io/portfolio-geovanna-github/assets/img/geovanna-avatar.webp.jpg">
+  <meta property="og:image" content="https://geovannasilva15.github.io/portfolio-geovanna-github/assets/img/geovanna-perfil.webp">
   <link rel="canonical" href="https://geovannasilva15.github.io/portfolio-geovanna-github/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -299,6 +299,15 @@
     .etl-preview small{font-size:13px;letter-spacing:0}
     .etl-preview-footer{display:inline-flex;padding:8px 11px;margin-top:7px;border:1px solid rgba(255,255,255,.24);border-radius:7px;font-size:11px;color:#e6edf8}
     @media(prefers-reduced-motion:reduce){.project-media.project-screenshot img{transition:none}}
+
+    /* Retrato profissional na abertura e foto da formatura na trajetoria */
+    .hero .photo-frame img{display:block;aspect-ratio:4/5;object-fit:cover;object-position:center 36%}
+    .formation-photo{display:flex;align-items:center;gap:16px;margin:0 0 18px;padding:12px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+    .formation-photo img{display:block;width:110px;height:110px;flex:0 0 110px;object-fit:cover;object-position:center;border-radius:11px}
+    .formation-photo figcaption{display:flex;flex-direction:column;gap:6px;min-width:0}
+    .formation-photo figcaption strong{font:700 14px/1.35 "Space Grotesk",sans-serif;color:var(--text)}
+    .formation-photo figcaption span{font:400 12px/1.5 "DM Sans",sans-serif;color:var(--muted)}
+    @media(max-width:430px){.formation-photo{gap:12px}.formation-photo img{width:90px;height:90px;flex-basis:90px}.formation-photo figcaption strong{font-size:13px}}
 </style>
 </head>
 <body>
@@ -336,11 +345,11 @@
         </div>
         <div class="photo-wrap">
           <div class="photo-frame">
-            <img src="./assets/img/geovanna-avatar.webp.jpg" alt="Geovanna Eduarda da Silva em sua formatura" width="400" height="400" fetchpriority="high">
+            <img src="./assets/img/geovanna-perfil.webp" alt="Retrato profissional de Geovanna Eduarda da Silva" width="900" height="1260" fetchpriority="high">
           </div>
           <div class="photo-caption">
-            <strong>Da formação à prática.</strong>
-            <span>Gestão de TI concluída · IA e Machine Learning</span>
+            <strong>Tecnologia aplicada a problemas reais.</strong>
+            <span>IA generativa · Python · Software</span>
           </div>
         </div>
       </div>
@@ -523,6 +532,10 @@
           </div>
           <div class="journey-side">
             <h3>Formação</h3>
+            <figure class="formation-photo">
+              <img src="./assets/img/geovanna-avatar.webp.jpg" alt="Geovanna Eduarda da Silva em sua formatura de Gestão da Tecnologia da Informação" width="400" height="400" loading="lazy">
+              <figcaption><strong>Um marco da minha trajetória</strong><span>Formatura em Gestão da Tecnologia da Informação · 2025</span></figcaption>
+            </figure>
             <div class="small-card"><strong>Engenharia de Software</strong><p>Graduação em andamento.</p></div>
             <div class="small-card"><strong>IA e Machine Learning</strong><p>Pós-graduação concluída.</p></div>
             <div class="small-card"><strong>Gestão da Tecnologia da Informação</strong><p>Graduação concluída em 2025.</p></div>
