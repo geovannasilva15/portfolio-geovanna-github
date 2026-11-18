@@ -30,8 +30,10 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>Geovanna Eduarda da Silva | IA Generativa & Engenharia de Software</title>
   <link rel="stylesheet" href="./css/portfolio.css">
+<link rel="stylesheet" href="./css/motion.css">
 </head>
 <body>
+<div class="motion-progress" aria-hidden="true"></div>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
   <header class="site-header">
     <div class="container head-inner">
@@ -66,6 +68,7 @@
             <a class="btn btn-quiet" href="https://www.linkedin.com/in/geovannaeduarda/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           </div>
           <div class="hero-note"><span>Python &amp; FastAPI</span><span>IA generativa</span><span>Projetos com código aberto</span></div>
+<div class="hero-scroll" aria-hidden="true"><span class="hero-scroll-line"></span><span>ROLE PARA EXPLORAR</span><span class="hero-scroll-arrow">↓</span></div>
         </div>
         <div class="photo-wrap">
           <div class="photo-frame">
@@ -79,7 +82,10 @@
       </div>
     </section>
 
-    <div class="divider"></div>
+    <div class="motion-band" role="region" aria-label="Geovanna e áreas de atuação">
+  <span class="sr-only">Geovanna, Python, inteligência artificial, engenharia de software e projetos reais</span>
+  <div class="motion-band-track" aria-hidden="true"><div class="motion-band-group"><span class="motion-band-item">GEOVANNA</span><span class="motion-band-item">PYTHON</span><span class="motion-band-item">INTELIGÊNCIA ARTIFICIAL</span><span class="motion-band-item">ENGENHARIA DE SOFTWARE</span><span class="motion-band-item">PROJETOS REAIS</span></div><div class="motion-band-group"><span class="motion-band-item">GEOVANNA</span><span class="motion-band-item">PYTHON</span><span class="motion-band-item">INTELIGÊNCIA ARTIFICIAL</span><span class="motion-band-item">ENGENHARIA DE SOFTWARE</span><span class="motion-band-item">PROJETOS REAIS</span></div></div>
+</div>
     <section class="section" id="projetos" aria-labelledby="projects-title">
       <div class="container">
         <div class="section-head">
@@ -369,5 +375,6 @@
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
     }());
   </script>
+<script src="./js/motion.js" defer></script>
 </body>
 </html>

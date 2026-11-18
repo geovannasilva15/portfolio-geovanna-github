@@ -27,9 +27,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/portfolio.css">
+<link rel="stylesheet" href="../css/motion.css">
 <title>Geovanna Eduarda da Silva | AI & Software Engineering</title>
 </head>
 <body>
+<div class="motion-progress" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="container head-inner">
 <a class="logo" href="#home" aria-label="Geovanna — back to top">geovanna<span>.</span></a>
@@ -54,10 +56,14 @@
 <a class="btn btn-quiet" href="https://www.linkedin.com/in/geovannaeduarda/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
 </div>
 <div class="hero-note"><span>Python &amp; FastAPI</span><span>Generative AI</span><span>Open-source projects</span></div>
+<div class="hero-scroll" aria-hidden="true"><span class="hero-scroll-line"></span><span>SCROLL TO EXPLORE</span><span class="hero-scroll-arrow">↓</span></div>
 </div>
 <div class="photo-wrap"><div class="photo-frame"><img src="../assets/img/geovanna-perfil.webp" alt="Professional portrait of Geovanna Eduarda da Silva" width="900" height="1260" fetchpriority="high" decoding="async"></div></div>
 </div></section>
-<div class="divider"></div>
+<div class="motion-band" role="region" aria-label="Geovanna and areas of expertise">
+  <span class="sr-only">Geovanna, Python, artificial intelligence, software engineering and real-world projects</span>
+  <div class="motion-band-track" aria-hidden="true"><div class="motion-band-group"><span class="motion-band-item">GEOVANNA</span><span class="motion-band-item">PYTHON</span><span class="motion-band-item">ARTIFICIAL INTELLIGENCE</span><span class="motion-band-item">SOFTWARE ENGINEERING</span><span class="motion-band-item">REAL-WORLD PROJECTS</span></div><div class="motion-band-group"><span class="motion-band-item">GEOVANNA</span><span class="motion-band-item">PYTHON</span><span class="motion-band-item">ARTIFICIAL INTELLIGENCE</span><span class="motion-band-item">SOFTWARE ENGINEERING</span><span class="motion-band-item">REAL-WORLD PROJECTS</span></div></div>
+</div>
 <section class="section" id="projects" aria-labelledby="projects-title"><div class="container">
 <div class="section-head"><div><span class="section-kicker">01 / Selected projects</span><h2 class="section-title" id="projects-title">What I've been building</h2><p class="section-lead">Real applications, documented code and technical decisions. Each case study explains the problem, solution and current development stage.</p></div>
 <a class="text-link" href="https://github.com/geovannasilva15?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories ↗</a></div>
@@ -137,4 +143,5 @@ nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMe
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()});
 })();
 </script>
+<script src="../js/motion.js" defer></script>
 </body></html>
