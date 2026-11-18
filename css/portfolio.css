@@ -328,3 +328,20 @@
 @media(max-width:700px){.site-nav{top:68px}}
 @media(max-width:620px){.skills-grid{grid-template-columns:1fr}.skill-card{padding:23px}.hero-buttons .btn{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.skill-card{transition:none}}
+
+/* Case-study evidence and compact AI workflow, 2026-11-18 */
+.hero-flow{position:relative;display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:20px;padding:13px 9px;border:1px solid var(--line);border-radius:12px;background:var(--card);font-family:"Space Grotesk",sans-serif}
+.hero-flow-step{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--text)}
+.hero-flow-arrow{color:var(--accent);font-size:15px}
+.project-proof{display:grid;gap:0;margin:0 0 20px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.project-proof-row{display:grid;grid-template-columns:83px minmax(0,1fr);gap:10px;align-items:baseline;padding:7px 0}
+.project-proof-row dt{font-size:9px;font-weight:800;letter-spacing:.10em;color:var(--accent)}
+.project-proof-row dd{margin:0;color:var(--muted);font-size:12px;line-height:1.55}
+.project .project-body>.project-proof{margin-top:2px}
+.project .project-body>.project-proof+.stack-tags{margin-bottom:19px}
+.project .project-body>.project-proof+.stack-tags span{font-size:10px}
+.project-media img{transition:transform .4s ease}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.project:hover .project-media img{transform:scale(1.025)}}
+@media(max-width:700px){.hero-flow{max-width:260px;margin-inline:auto}.project-proof-row{grid-template-columns:78px minmax(0,1fr)}}
+@media(max-width:390px){.project-proof-row{grid-template-columns:1fr;gap:2px}.hero-flow{gap:6px}}
+@media(prefers-reduced-motion:reduce){.project-media img{transition:none}}

@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>Geovanna Eduarda da Silva | IA Generativa & Engenharia de Software</title>
-  <link rel="stylesheet" href="./css/portfolio.css">
+  <link rel="stylesheet" href="./css/portfolio.css?v=20261118e">
 <link rel="stylesheet" href="./css/motion.css?v=20261118d">
 </head>
 <body>
@@ -61,7 +61,7 @@
         <div>
           <p class="eyebrow">Inteligência Artificial · Desenvolvimento de Software</p>
           <h1 id="hero-title">Geovanna Eduarda <span>da Silva.</span></h1>
-          <p class="intro">Transformo ideias em aplicações que resolvem problemas reais. Trabalho com Inteligência Artificial e desenvolvo projetos com Python, APIs e produtos digitais — sempre com foco em aprender, testar e entregar soluções úteis.</p>
+          <p class="intro">Desenvolvo soluções que conectam inteligência artificial, software e problemas reais. Trabalho com Python, APIs e IA generativa — da ideia ao protótipo, com foco em clareza, testes e aplicação prática.</p>
           <div class="hero-buttons">
             <a class="btn btn-primary" href="#projetos">Conhecer meus projetos <span aria-hidden="true">↗</span></a>
             <a class="btn" href="./assets/docs/CV-Geovanna-Silva.pdf" download="CV-Geovanna-Eduarda-da-Silva.pdf" aria-label="Baixar currículo em PDF">Baixar currículo ↓</a>
@@ -78,6 +78,11 @@
             <strong>Tecnologia aplicada a problemas reais.</strong>
             <span>IA generativa · Python · Software</span>
           </div>
+<div class="hero-flow" role="img" aria-label="Fluxo ilustrativo de IA: dados, modelo e resposta">
+   <span class="hero-flow-step">DADOS</span><span class="hero-flow-arrow" aria-hidden="true">→</span>
+   <span class="hero-flow-step">MODELO</span><span class="hero-flow-arrow" aria-hidden="true">→</span>
+   <span class="hero-flow-step">RESPOSTA</span>
+ </div>
         </div>
       </div>
     </section>
@@ -106,9 +111,14 @@
             <div class="project-body">
               <div class="project-meta"><span class="tag-feature">IA &amp; produto</span><span>Demonstração online</span></div>
               <h3>Proof Before Post</h3>
-              <p>Ferramenta bilíngue de educação midiática para revisar afirmações, comparar evidências e registrar o processo de checagem antes de publicar um conteúdo. A decisão permanece com a pessoa usuária.</p>
+              <p>Ferramenta de educação midiática para revisar afirmações e comparar evidências antes da publicação. A decisão continua sendo humana.</p>
               <p class="project-footnote">Projeto em equipe com Matheus Barcelli Marques de Lima.</p>
-              <div class="stack-tags"><span>Next.js</span><span>TypeScript</span><span>React</span><span>OpenAI API</span></div>
+              <dl class="project-proof" aria-label="Resumo técnico do projeto">
+<div class="project-proof-row"><dt>DESAFIO</dt><dd>Checar afirmações antes de publicar</dd></div>
+<div class="project-proof-row"><dt>ABORDAGEM</dt><dd>Next.js e revisão guiada de evidências</dd></div>
+<div class="project-proof-row"><dt>ENTREGA</dt><dd>Demo online, código e testes</dd></div>
+</dl>
+<div class="stack-tags"><span>Next.js</span><span>TypeScript</span><span>React</span><span>OpenAI API</span></div>
               <div class="project-links"><a class="project-case-link" href="./projetos/proof-before-post.html" aria-label="Ler estudo de caso de Proof Before Post">Explorar projeto ↗</a>
                 <a href="https://proof-before-post.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demonstração do Proof Before Post">Ver demonstração ↗</a>
                 <a href="https://github.com/geovannasilva15/proof-before-post" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório do Proof Before Post">Código ↗</a>
@@ -124,9 +134,14 @@
             <div class="project-body">
               <div class="project-meta"><span class="tag-feature">IA aplicada</span><span>MVP local</span></div>
               <h3>BeautyFlow AI</h3>
-              <p>Uma plataforma para apoiar a gestão de negócios de beleza: agenda, clientes, serviços e recomendações. Inclui API, interface em Streamlit e assistente de texto que pode usar um LLM quando configurado.</p>
+              <p>MVP para organizar agenda, clientes e serviços de negócios de beleza, com API e interface demonstrativa.</p>
               <p class="project-footnote">O MVP roda localmente; o uso do LLM depende de chave de API. Não é uma solução pública em produção.</p>
-              <div class="stack-tags"><span>Python</span><span>FastAPI</span><span>Streamlit</span><span>SQLite</span></div>
+              <dl class="project-proof" aria-label="Resumo técnico do projeto">
+<div class="project-proof-row"><dt>DESAFIO</dt><dd>Reunir agenda, clientes e serviços</dd></div>
+<div class="project-proof-row"><dt>ABORDAGEM</dt><dd>FastAPI + Streamlit + SQLite</dd></div>
+<div class="project-proof-row"><dt>ENTREGA</dt><dd>MVP local com testes</dd></div>
+</dl>
+<div class="stack-tags"><span>Python</span><span>FastAPI</span><span>Streamlit</span><span>SQLite</span></div>
               <div class="project-links"><a class="project-case-link" href="./projetos/beautyflow-ai.html" aria-label="Ler estudo de caso de BeautyFlow AI">Explorar projeto ↗</a><a href="https://github.com/geovannasilva15/beautyflow-ai" target="_blank" rel="noopener noreferrer" aria-label="Ver código e instruções do BeautyFlow AI">Código e execução ↗</a></div>
             </div>
           </article>
@@ -139,8 +154,13 @@
             <div class="project-body">
               <div class="project-meta"><span class="tag-feature">Acessibilidade</span><span>Protótipo</span></div>
               <h3>ClariVoz</h3>
-              <p>Experiência de tecnologia assistiva com leitura em voz alta, simplificação demonstrativa de textos e ajustes visuais. Um projeto sobre tornar informações digitais mais acessíveis.</p>
-              <div class="stack-tags"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Web Speech API</span></div>
+              <p>Protótipo de acessibilidade digital com leitura em voz alta, simplificação demonstrativa e ajustes visuais.</p>
+              <dl class="project-proof" aria-label="Resumo técnico do projeto">
+<div class="project-proof-row"><dt>DESAFIO</dt><dd>Facilitar a leitura de conteúdo digital</dd></div>
+<div class="project-proof-row"><dt>ABORDAGEM</dt><dd>Next.js + Web Speech API</dd></div>
+<div class="project-proof-row"><dt>ENTREGA</dt><dd>Protótipo público e capturas reais</dd></div>
+</dl>
+<div class="stack-tags"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Web Speech API</span></div>
               <div class="project-links"><a class="project-case-link" href="./projetos/clarivoz.html" aria-label="Ler estudo de caso de ClariVoz">Explorar projeto ↗</a><a href="https://github.com/geovannasilva15/clarivoz" target="_blank" rel="noopener noreferrer" aria-label="Ver código e capturas reais do ClariVoz">Código e capturas ↗</a></div>
             </div>
           </article>
@@ -154,8 +174,13 @@
             <div class="project-body">
               <div class="project-meta"><span class="tag-feature">Dados &amp; Python</span><span>Execução local</span></div>
               <h3>Pipeline ETL com Python</h3>
-              <p>Pipeline de extração, transformação e exportação de dados fictícios, com geração de mensagens contextualizadas. Roda sem serviços externos e permite integração opcional com a API da OpenAI.</p>
-              <div class="stack-tags"><span>Python</span><span>Pandas</span><span>CSV / JSON</span><span>OpenAI opcional</span></div>
+              <p>Pipeline em Python que valida e transforma dados fictícios, exportando resultados em CSV e JSON, sem depender de serviços externos.</p>
+              <dl class="project-proof" aria-label="Resumo técnico do projeto">
+<div class="project-proof-row"><dt>DESAFIO</dt><dd>Validar e transformar dados fictícios</dd></div>
+<div class="project-proof-row"><dt>ABORDAGEM</dt><dd>Python + pandas + regras locais</dd></div>
+<div class="project-proof-row"><dt>ENTREGA</dt><dd>CSV/JSON com 5 registros de exemplo</dd></div>
+</dl>
+<div class="stack-tags"><span>Python</span><span>Pandas</span><span>CSV / JSON</span><span>OpenAI opcional</span></div>
               <div class="project-links"><a class="project-case-link" href="./projetos/pipeline-etl-python.html" aria-label="Ler estudo de caso de Pipeline ETL com Python">Explorar projeto ↗</a><a href="https://github.com/geovannasilva15/Etl-python-ia" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório do pipeline ETL com Python">Ver pipeline ↗</a></div>
             </div>
           </article>
