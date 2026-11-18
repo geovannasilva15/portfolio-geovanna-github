@@ -162,3 +162,94 @@ html[data-theme="light"]{
   .hero h1 span{-webkit-text-fill-color:var(--accent);background:none}
   html.motion-ready .reveal-on-scroll{opacity:1;translate:none}
 }
+/* Signature moment: unmistakably Geovanna, without copying another site's identity. */
+.hero-live-label{
+  display:inline-flex;align-items:center;gap:9px;
+  margin-bottom:23px;padding:8px 13px;border-radius:100px;
+  border:1px solid rgba(243,172,201,.35);background:rgba(243,172,201,.085);
+  color:var(--accent);font:700 10px/1.4 "Space Grotesk",sans-serif;
+  letter-spacing:.16em;text-transform:uppercase;
+}
+.hero-live-dot{width:7px;height:7px;flex:none;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(243,172,201,.13)}
+.motion-identity{
+  position:relative;isolation:isolate;overflow:hidden;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:linear-gradient(155deg,var(--bg2),var(--bg) 72%);
+}
+.motion-identity::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse at 51% 46%,var(--motion-halo),transparent 67%);
+  opacity:.45;
+}
+.motion-identity-inner{position:relative;z-index:1;padding-top:34px;padding-bottom:33px}
+.motion-identity-top,.motion-identity-bottom{
+  display:flex;justify-content:space-between;align-items:center;gap:18px;
+  font:700 10px/1.5 "Space Grotesk",sans-serif;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);
+}
+.motion-identity-top>span:last-child{color:var(--accent)}
+.motion-identity-name{
+  position:relative;display:flex;justify-content:center;align-items:center;
+  padding:28px 0 22px;overflow:hidden;
+}
+.motion-identity-name>span{
+  display:block;position:relative;
+  font:800 clamp(54px,15.6vw,224px)/.92 "Space Grotesk",sans-serif;
+  letter-spacing:-.095em;white-space:nowrap;
+  color:var(--accent);
+  background:linear-gradient(115deg,var(--accent-strong),var(--accent) 38%,#c67ba5 65%,var(--accent-strong));
+  background-size:230% 100%;-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 10px 45px rgba(214,99,162,.14));
+}
+.motion-identity-name::before{
+  content:"GEOVANNA";position:absolute;left:50%;top:50%;
+  transform:translate(-49.5%,-40%);white-space:nowrap;
+  font:800 clamp(54px,15.6vw,224px)/.92 "Space Grotesk",sans-serif;
+  letter-spacing:-.095em;color:transparent;
+  -webkit-text-stroke:1px rgba(243,172,201,.17);opacity:.65;
+  pointer-events:none;
+}
+.motion-identity-scan{position:relative;height:1px;background:var(--line);overflow:hidden}
+.motion-identity-scan>span{
+  display:block;position:absolute;left:0;top:0;width:28%;height:100%;
+  background:linear-gradient(90deg,transparent,var(--accent),transparent);
+}
+.motion-identity-bottom{padding-top:23px}
+.motion-identity-bottom>span:first-child{color:var(--text)}
+@media(prefers-reduced-motion:no-preference){
+  .hero-live-dot{animation:motionLive 2.4s ease-in-out infinite}
+  .motion-identity-name>span{animation:motionNameReveal 1.25s cubic-bezier(.2,.78,.2,1) both,motionNameColor 8s ease-in-out 1.25s infinite}
+  .motion-identity-name::before{animation:motionNameOutline 7s ease-in-out infinite}
+  .motion-identity-scan>span{animation:motionScan 5s linear infinite}
+}
+@keyframes motionNameReveal{
+  from{opacity:0;transform:translateY(35px) scale(.96);filter:blur(6px)}
+  to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+}
+@keyframes motionNameColor{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+@keyframes motionNameOutline{
+  0%,100%{transform:translate(-49.5%,-40%);opacity:.5}
+  50%{transform:translate(-50.3%,-45%);opacity:.85}
+}
+@keyframes motionScan{
+  from{transform:translateX(-110%)}
+  to{transform:translateX(450%)}
+}
+@keyframes motionLive{
+  0%,100%{box-shadow:0 0 0 4px rgba(243,172,201,.13)}
+  50%{box-shadow:0 0 0 8px rgba(243,172,201,0)}
+}
+@media(max-width:700px){
+  .motion-identity-inner{padding-top:23px;padding-bottom:24px}
+  .motion-identity-top,.motion-identity-bottom{font-size:8px;letter-spacing:.09em}
+  .motion-identity-name{padding:27px 0}
+  .motion-identity-name>span,.motion-identity-name::before{font-size:clamp(45px,14.6vw,105px)}
+  .hero-live-label{font-size:9px;letter-spacing:.1em}
+}
+@media(max-width:390px){
+  .motion-identity-top,.motion-identity-bottom{flex-wrap:wrap;row-gap:6px}
+}
